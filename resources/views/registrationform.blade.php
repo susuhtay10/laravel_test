@@ -8,7 +8,7 @@
 }
 
 form {
-      display: inline;
+    display:inline;
 } 
 
 input[type="text"],
@@ -70,7 +70,7 @@ textarea {
         <input type="file" id="image" name="image"><br><br>
     </div>
     <div>
-    <input type="submit" id="submit" name="submit">
+    <button name="button" id="submit">Login</button>
     </div>
 </form>
 @endsection
