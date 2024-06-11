@@ -27,7 +27,7 @@ textarea {
 
 </style>
 <p1><center><B>User Registration Form</B></center></p1> <br>
-<form method="POST" action="{{route('registrationform')}}">
+<form method="POST" action="{{route('storeRegistrationForm')}}" enctype="multipart/form-data">
     @csrf
     <div>
     <label for="name">Name:</label>
@@ -65,12 +65,14 @@ textarea {
     <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob"><br>
     </div>
-    <div>    
-    <label for="image">Profile Image:</label>
+    <div>  
+        <label for="image">Profile Image:</label>
         <input type="file" id="image" name="image"><br><br>
+        
     </div>
     <div>
-    <button name="button" id="submit">Login</button>
+    <button type="submit">Save</button>
+    <a href="{{ url('students') }}">Back</a>
     </div>
 </form>
 @endsection

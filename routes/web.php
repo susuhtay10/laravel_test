@@ -39,4 +39,10 @@ Route::get('main', function(){
 
 Route::get('/registrationform',[RegistraController::class,'showRegistrationForm'])->name('registrationform');
 Route::post('/registrationform',[RegistraController::class,'registrationform']);
- 
+Route::post('storeRegistrationForm',[RegistraController::class, 'storeData'])->name('storeRegistrationForm');
+Route::get('students',[RegistraController::class,'index'])->name('students');
+Route::delete('deleteStudent/{id}', [RegistraController::class, 'deleteStudent'])->name('deleteStudent');
+Route::get('editStudent/{id}',[RegistraController::class, 'editStudent'])->name('editStudent');
+Route::post('updateStudent/{id}',[RegistraController::class, 'updateStudent'])->name('updateStudent');
+Route::post('upload',[RegistraController::class, 'upload'])->name('upload');
+
